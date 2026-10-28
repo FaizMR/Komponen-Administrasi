@@ -50,6 +50,6 @@ class User extends Authenticatable
     public function covers(): BelongsToMany
     {
         // Parameter kedua adalah nama tabel pivot, parameter ketiga & keempat adalah foreign key-nya
-        return $this->belongsToMany(CoverAdministration::class, 'cover_user_pivot', 'user_id', 'cover_administrasi_id');
+        return $this->belongsToMany(CoverAdministration::class, 'cover_user_pivot', 'user_id', 'cover_administration_id');
     }
 }

@@ -17,7 +17,7 @@ class CoverAdministration extends Model
      *
      * @var list<string>
      */
-    protected $table = 'cover_administrasi';
+    protected $table = 'cover_administration';
     protected $fillable = [
         'header',
         'tahun_ajaran',
@@ -29,6 +29,6 @@ class CoverAdministration extends Model
 
     public function users(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'cover_user_pivot', 'cover_administrasi_id', 'user_id');
+        return $this->belongsToMany(User::class, 'cover_user_pivot', 'cover_administration_id', 'user_id');
     }
 }
